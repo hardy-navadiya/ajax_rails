@@ -1,0 +1,13 @@
+<%= form_for(@student) do |f| %>
+ 	<%= f.label :name %>
+  <%= f.text_field :name, class:"form-control" %><br>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, class:"form-control" %><br>
+
+  <% if @student.id.present? %>
+    <button class="update", type="button", data-id="<%= student.id %>">Update</button>
+  <% else %>
+    <button class="submit", type="button">submit</button>
+  <% end %>
+<% end %>

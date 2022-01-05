@@ -1,0 +1,27 @@
+<h5>change value through button</h5>
+
+<button class="submit", type="button">submit</button>
+
+<button class="btn btn-success green", type="submit">green</button>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  $(".green").click(function(){
+	  	$.ajax({
+	  		url: '/students/btn_green_input',
+	  		type: 'GET',
+	  		dataType: 'script',
+	  	})
+	  	.done(function() {
+	  		console.log("success");
+	  	})
+	  	.fail(function() {
+	  		console.log("error");
+	  	})
+	  	.always(function() {
+	  		console.log("complete");
+	  	});
+	  	
+	  });
+	});
+</script>

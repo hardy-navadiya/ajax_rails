@@ -1,0 +1,15 @@
+<tbody>
+	<% @students.each do |s| %>
+	    <tr class="tr_<%= s.id %>">
+	      <th scope="row"><%= s.id %></th>
+	      <td><%= s.name %></td>
+	      <td><%= s.email %></td>
+	      <td>
+	      	<button type="button" data-id = "<%= s.id %>" class="del">delete</button>
+	      </td>
+	      <td>
+	      	<button type="button" data-id="<%= s.id %>" class="edit">edit</button>
+	      </td>
+	    </tr>
+	<% end %>
+</tbody>
